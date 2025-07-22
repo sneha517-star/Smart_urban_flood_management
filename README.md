@@ -75,3 +75,33 @@ This project aims to tackle **urban flooding** by deploying a **data-driven**, i
 
 ## 🛠️ Project Architecture
 
+
+
+
+
+---
+
+## 🔐 Security and Privacy
+- Encrypted communication via MQTT over TLS
+- Authenticated access to dashboard and cloud endpoints
+- Secured device-level firmware
+
+---
+
+## 👩‍💻 Team & Contributions
+
+**Project By**: Sneha M , Vishweswaran M , Vishnupriya M 
+**Role**: IoT integration, ML model development, dashboard configuration  
+Feel free to reach out or contribute!
+
+---
+
+## 📄 License
+
+This project is open-source under the [MIT License](LICENSE).
+
+---
+
+
+
+
