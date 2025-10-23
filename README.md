@@ -1,15 +1,15 @@
-# 🌧️ Smart Urban Flood Management System 🚨
+#  Smart Urban Flood Management System �
 An advanced flood monitoring and prevention system that integrates **IoT**, **Machine Learning**, and **Cloud Technologies** to provide real-time data, predictive analytics, and automated alerts—empowering smart cities with faster response and proactive maintenance.
 
 ---
 
-## 📌 Overview
+## Overview
 
 This project aims to tackle **urban flooding** by deploying a **data-driven**, intelligent system to monitor water levels, detect potential hazards, and predict blockages in drainage systems. The system leverages **Arduino/Raspberry Pi**, multiple sensors, **cloud dashboards**, and **machine learning models** to enhance urban flood resilience.
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - **IoT-Based Real-Time Monitoring**  
   Collects continuous data from sensors placed in manholes and drains.
@@ -34,7 +34,7 @@ This project aims to tackle **urban flooding** by deploying a **data-driven**, i
 
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 | Layer           | Tools / Components                               |
 |----------------|---------------------------------------------------|
@@ -47,7 +47,7 @@ This project aims to tackle **urban flooding** by deploying a **data-driven**, i
 
 ---
 
-## 🧠 Machine Learning
+## Machine Learning
 
 - **Goal**: Predict potential flood or blockage
 - **Input Features**:
@@ -61,7 +61,7 @@ This project aims to tackle **urban flooding** by deploying a **data-driven**, i
 
 ---
 
-## 📊 Dashboard Preview
+## Dashboard Preview
 
 > A customizable dashboard built with **Scikit-learn** to visualize:
 - Live sensor readings (e.g., water level, gas levels)
@@ -73,7 +73,7 @@ This project aims to tackle **urban flooding** by deploying a **data-driven**, i
 
 ---
 
-## 🛠️ Project Architecture
+## Project Architecture
 
 
 
@@ -81,14 +81,14 @@ This project aims to tackle **urban flooding** by deploying a **data-driven**, i
 
 ---
 
-## 🔐 Security and Privacy
+## Security and Privacy
 - Encrypted communication via MQTT over TLS
 - Authenticated access to dashboard and cloud endpoints
 - Secured device-level firmware
 
 ---
 
-## 👩‍💻 Team & Contributions
+## Team & Contributions
 
 **Project By**: Sneha M , Vishweswaran M  
 **Role**: IoT integration, ML model development, dashboard configuration  
@@ -96,7 +96,7 @@ Feel free to reach out or contribute!
 
 ---
 
-## 📄 License
+## License
 
 This project is open-source under the [MIT License](LICENSE).
 
