@@ -1,4 +1,4 @@
-#  Smart Urban Flood Management System �
+#  Smart Urban Flood Management System 
 An advanced flood monitoring and prevention system that integrates **IoT**, **Machine Learning**, and **Cloud Technologies** to provide real-time data, predictive analytics, and automated alerts—empowering smart cities with faster response and proactive maintenance.
 
 ---
