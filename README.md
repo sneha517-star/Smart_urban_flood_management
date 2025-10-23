@@ -90,7 +90,7 @@ This project aims to tackle **urban flooding** by deploying a **data-driven**, i
 
 ## 👩‍💻 Team & Contributions
 
-**Project By**: Sneha M , Vishweswaran M , Vishnupriya M 
+**Project By**: Sneha M , Vishweswaran M  
 **Role**: IoT integration, ML model development, dashboard configuration  
 Feel free to reach out or contribute!
 
