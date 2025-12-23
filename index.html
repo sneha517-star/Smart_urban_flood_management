@@ -10,11 +10,6 @@
 
 <!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-(function(){
-    emailjs.init("3aYlgGOD4ovYXKZNh"); 
-})();
-</script>
 
 <style>
 body {
@@ -44,7 +39,7 @@ h2 {
     text-align: center;
     color: #0a3d62;
 }
-.cards, .dashboard {
+.dashboard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 20px;
@@ -69,9 +64,6 @@ button {
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
-}
-button:hover {
-    background: #4a69bd;
 }
 .alert {
     margin-top: 15px;
@@ -113,7 +105,7 @@ footer {
 
 <section>
 <h2>Emergency Email Alert</h2>
-<p style="text-align:center;">Automatically sends an email when danger level is detected.</p>
+<p style="text-align:center;">Sends real-time flood alerts to officials via email.</p>
 <div style="text-align:center;">
     <button onclick="sendAlert()">Trigger Alert</button>
     <div class="alert" id="alertMsg"></div>
@@ -125,11 +117,16 @@ footer {
 </footer>
 
 <script>
+// ✅ Initialize EmailJS AFTER page load
+window.onload = function () {
+    emailjs.init("3aYlgGOD4ovYXKZNh"); // ✅ Public Key
+};
+
+// Sensor simulation
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Real-time simulation
 setInterval(() => {
     let water = random(50, 95);
     let gas = random(150, 420);
@@ -146,25 +143,30 @@ setInterval(() => {
     }
 }, 2000);
 
-// EMAIL ALERT FUNCTION
+// ✅ EMAIL ALERT FUNCTION
 function sendAlert() {
-    let params = {
+    const params = {
         location: "Coimbatore – Drainage Zone 3",
         water: document.getElementById("water").innerText,
         gas: document.getElementById("gas").innerText
     };
 
     emailjs.send(
-        "service_25g1f8m",
-        "template_18gznob",
+        "service_25g1f8m",     // Service ID
+        "template_18gznob",    // Template ID
         params
-    ).then(function() {
-        document.getElementById("alertMsg").innerText =
-        "✅ Email alert sent successfully!";
-    }, function(error) {
-        document.getElementById("alertMsg").innerText =
-        "❌ Email sending failed!";
-    });
+    ).then(
+        function(response) {
+            console.log("SUCCESS!", response.status, response.text);
+            document.getElementById("alertMsg").innerText =
+                "✅ Email alert sent successfully!";
+        },
+        function(error) {
+            console.error("FAILED...", error);
+            document.getElementById("alertMsg").innerText =
+                "❌ Email sending failed. Check console.";
+        }
+    );
 }
 </script>
 
