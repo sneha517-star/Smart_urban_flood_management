@@ -1,135 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Urban Flood Management | Real-Time Monitoring</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f6f8;
-        }
-        header {
-            background: #0a3d62;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 30px;
-            max-width: 1100px;
-            margin: auto;z:\index.html
-        }
-        h2 {
-            color: #0a3d62;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .dashboard {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .value {
-            font-size: 28px;
-            font-weight: bold;
-            color: #e55039;
-        }
-        button {
-            background: #1e3799;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #4a69bd;
-        }
-        footer {
-            background: #0a3d62;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Smart Urban Flood Management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1509395176047-4a66953fd231");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #0a3d62;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+}
+
+.value {
+    font-size: 30px;
+    color: #e55039;
+    font-weight: bold;
+}
+
+button {
+    background: #1e3799;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #4a69bd;
+}
+
+.alert {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+footer {
+    background: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Urban Flood Management with Real-Time Monitoring</h1>
-    <p>AI & IoT Based Smart Drainage Monitoring System</p>
+    <h1>Smart Urban Flood Management</h1>
+    <p>AI & IoT Based Real-Time Flood Monitoring and Alert System</p>
 </header>
 
 <section>
+<h2>Problem & Solution</h2>
+<div class="cards">
     <div class="card">
-        <h2>Problem Statement</h2>
-        <p>
-            Urban flooding is increasing due to rapid urbanization and inefficient drainage systems.
-            Traditional manual inspections are slow, risky, and reactive. The absence of predictive
-            monitoring and early warning systems leads to delayed responses and increased hazards.
-        </p>
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+        <h3>Urban Flooding</h3>
+        <p>Rapid urbanization causes drainage overflow and delayed emergency response.</p>
     </div>
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+        <h3>IoT Monitoring</h3>
+        <p>Sensors monitor water level, gas concentration, and blockages in real time.</p>
+    </div>
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png">
+        <h3>AI Prediction</h3>
+        <p>Machine learning predicts flood risks and enables proactive maintenance.</p>
+    </div>
+</div>
+</section>
 
+<section>
+<h2>Real-Time Monitoring Dashboard</h2>
+<div class="dashboard">
     <div class="card">
-        <h2>Proposed Solution</h2>
-        <p>
-            Our system integrates IoT sensors and AI to continuously monitor water levels, toxic gases,
-            and blockages in drainage systems. Real-time data is visualized on a dashboard, analyzed
-            using machine learning, and automated email alerts are sent to officials when danger
-            thresholds are crossed.
-        </p>
+        <h3>Water Level</h3>
+        <div class="value" id="water">60 cm</div>
     </div>
+    <div class="card">
+        <h3>Gas Level</h3>
+        <div class="value" id="gas">210 ppm</div>
+    </div>
+    <div class="card">
+        <h3>Drain Status</h3>
+        <div class="value" id="status">Normal</div>
+    </div>
+</div>
+</section>
 
-    <div class="card">
-        <h2>Real-Time Monitoring Dashboard</h2>
-        <div class="dashboard">
-            <div class="card">
-                <h3>Water Level</h3>
-                <div class="value" id="water">65 cm</div>
-            </div>
-            <div class="card">
-                <h3>Gas Level</h3>
-                <div class="value" id="gas">220 ppm</div>
-            </div>
-            <div class="card">
-                <h3>Drain Status</h3>
-                <div class="value" id="status">Normal</div>
-            </div>
-        </div>
-    </div>
+<section>
+<h2>Emergency Alert System</h2>
+<p style="text-align:center;">Automated alerts are sent to officials when danger thresholds are exceeded.</p>
+<div style="text-align:center;">
+    <button onclick="sendAlert()">Trigger Alert Demo</button>
+    <div class="alert" id="alertMsg"></div>
+</div>
+</section>
 
-    <div class="card">
-        <h2>Email Alert Demo</h2>
-        <p>Click the button below to simulate a critical flood alert email being sent to officials.</p>
-        <button onclick="sendAlert()">Send Alert Email</button>
-        <p id="alertMsg"></p>
-    </div>
-
-    <div class="card">
-        <h2>Conclusion</h2>
-        <p>
-            This system improves response time, enhances worker safety, enables predictive maintenance,
-            and supports smart city flood management through data-driven decision-making.
-        </p>
-    </div>
+<section>
+<h2>Key Features</h2>
+<div class="cards">
+    <div class="card">✔ Real-Time IoT Data</div>
+    <div class="card">✔ AI-Based Flood Prediction</div>
+    <div class="card">✔ Email & SMS Alerts</div>
+    <div class="card">✔ Worker Safety Enhancement</div>
+</div>
 </section>
 
 <footer>
-    <p>Developed by AI & DS Students | RVS College of Engineering and Technology</p>
+<p>Developed by AI & DS Students | Smart City Flood Management Project</p>
 </footer>
 
 <script>
-    function sendAlert() {
-        document.getElementById("alertMsg").innerHTML =
-            "⚠️ Alert Triggered! Email sent to officials (demo simulation).";
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+setInterval(() => {
+    let water = random(50, 90);
+    let gas = random(150, 400);
+
+    document.getElementById("water").innerText = water + " cm";
+    document.getElementById("gas").innerText = gas + " ppm";
+
+    if (water > 75 || gas > 300) {
+        document.getElementById("status").innerText = "⚠️ Critical";
+        document.getElementById("status").style.color = "red";
+    } else {
+        document.getElementById("status").innerText = "Normal";
+        document.getElementById("status").style.color = "green";
     }
+}, 2000);
+
+function sendAlert() {
+    document.getElementById("alertMsg").innerText =
+    "🚨 Alert sent to officials via Email & SMS (Demo)";
+}
 </script>
 
 </body>
