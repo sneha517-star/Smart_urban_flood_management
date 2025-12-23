@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Urban Flood Management | Real-Time Monitoring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+        }
+        header {
+            background: #0a3d62;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 30px;
+            max-width: 1100px;
+            margin: auto;z:\index.html
+        }
+        h2 {
+            color: #0a3d62;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #e55039;
+        }
+        button {
+            background: #1e3799;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #4a69bd;
+        }
+        footer {
+            background: #0a3d62;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Urban Flood Management with Real-Time Monitoring</h1>
+    <p>AI & IoT Based Smart Drainage Monitoring System</p>
+</header>
+
+<section>
+    <div class="card">
+        <h2>Problem Statement</h2>
+        <p>
+            Urban flooding is increasing due to rapid urbanization and inefficient drainage systems.
+            Traditional manual inspections are slow, risky, and reactive. The absence of predictive
+            monitoring and early warning systems leads to delayed responses and increased hazards.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Proposed Solution</h2>
+        <p>
+            Our system integrates IoT sensors and AI to continuously monitor water levels, toxic gases,
+            and blockages in drainage systems. Real-time data is visualized on a dashboard, analyzed
+            using machine learning, and automated email alerts are sent to officials when danger
+            thresholds are crossed.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Real-Time Monitoring Dashboard</h2>
+        <div class="dashboard">
+            <div class="card">
+                <h3>Water Level</h3>
+                <div class="value" id="water">65 cm</div>
+            </div>
+            <div class="card">
+                <h3>Gas Level</h3>
+                <div class="value" id="gas">220 ppm</div>
+            </div>
+            <div class="card">
+                <h3>Drain Status</h3>
+                <div class="value" id="status">Normal</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Email Alert Demo</h2>
+        <p>Click the button below to simulate a critical flood alert email being sent to officials.</p>
+        <button onclick="sendAlert()">Send Alert Email</button>
+        <p id="alertMsg"></p>
+    </div>
+
+    <div class="card">
+        <h2>Conclusion</h2>
+        <p>
+            This system improves response time, enhances worker safety, enables predictive maintenance,
+            and supports smart city flood management through data-driven decision-making.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>Developed by AI & DS Students | RVS College of Engineering and Technology</p>
+</footer>
+
+<script>
+    function sendAlert() {
+        document.getElementById("alertMsg").innerHTML =
+            "⚠️ Alert Triggered! Email sent to officials (demo simulation).";
+    }
+</script>
+
+</body>
+</html>
